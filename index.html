@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List App</title>
+  </head>
+  <body>
+    <div id="taskForm">
+      <h1>Todo List</h1>
+      <form id="addTaskForm">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" required />
+
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" required />
+
+        <label for="priority">Priority:</label>
+        <select id="priority" class="priority-select">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <label for="status">Status:</label>
+        <select id="status" class="status-select">
+          <option value="todo">To-do</option>
+          <option value="inProgress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+
+    <div id="taskList">
+      <h2>Tasks</h2>
+      <div id="taskCounts"></div>
+      <input type="text" id="search" placeholder="Search tasks" />
+      <ul id="tasks"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
